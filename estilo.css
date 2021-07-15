@@ -1,0 +1,159 @@
+body{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: #ffffff;
+}
+
+#topo{
+    background: #2A804F;
+}
+
+#cabecalho{
+    height: 200px;
+    background: url("imagens/logo_direita.jpeg") no-repeat right top;
+}
+
+.logo{
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background: url("imagens/logo_esquerda.jpeg") no-repeat left top;
+    color: #ffffff;
+}
+.nome{
+    float: right;
+    margin-right: 470px;
+    padding: 10px;
+    margin-top: 58px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+}
+
+.conteudo{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 40px;
+}
+
+h2{
+    background: #2A804F;
+    color: #ffffff;
+    padding: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.coluna_esquerda{
+    width: 20%;
+    padding-right: 5px;
+}
+
+.acesso{
+    margin: 10px;
+    padding: 5px;
+    background: #2A804F;
+}
+
+.navegacao{
+    background: #ffffff;
+    padding: 5px;
+}
+
+/*colocar class login na página login*/
+/* marcar a página atual */
+body.home .navegacao a#home,
+body.animais .navegacao a#animais,
+body.login .navegacao a#login{
+    text-decoration: underline;
+}
+
+.acesso li{
+
+    text-align: center;
+    padding-top: 10px;
+    border-top: 2px solid #2A804F;
+    height: 25px;
+    color: #2A804F;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #2A804F;
+}
+
+/*
+imagem grande em apaf - será?
+img .imagem_principal{
+    width: 98%;
+    border: 3px solid #dfdfdf;
+}
+*/
+
+p{
+    text-align: justify;
+    color: #000000;
+}
+
+.coluna_direita{
+    width: 70%;
+    padding-left: 90px;
+}
+
+#eventos li h3{
+    color: #2A804F;
+}
+
+#eventos li{
+    padding: 35px;
+}
+
+#eventos li img{
+    float: left;
+    margin-right: 20px;
+}
+
+.descricao a{
+    text-decoration: none;
+    color: #2A804F;
+}
+
+.animais{
+    text-align: center;
+    clear: both;
+}
+
+#cao{
+
+}
+
+#gato{
+
+}
+
+#animal li{
+    padding: 60px;
+}
+
+#animal li h3{
+    color: #2A804F;
+    text-align: left;
+}
+
+#animal li img{
+    float: left;
+    margin-right: 20px;
+}
+
+#rodape{
+    height: 100px;
+    background: #2A804F url("imagens/rodape_direita.jpg") no-repeat right;
+    color: #ffffff;
+    padding-left: 30px;
+    text-align: left;
+}
