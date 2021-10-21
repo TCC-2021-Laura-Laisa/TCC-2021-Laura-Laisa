@@ -1,0 +1,105 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="sortcut icon" href="imagens/icone_pata.png" type="image/gif"/>
+    <title>APAF</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="javascript.js"></script>
+</head>
+<form action="formulario.php" method="POST" enctype="multipart/form-data"/>
+<!-- Classe para marcar a página atual -->
+<body class="">
+<div class="topo">
+        <div class="cabecalho">
+            <img src="imagens/logo_esquerda.jpeg">
+            <p class="nome">
+                <b> APAF </b>
+                <br> Associação Protetora de Animais de Formiga-MG
+            </p>
+        </div>
+    </div>
+<div class="conteudo">
+    <div class="coluna_esquerda">
+        <div class="acesso">
+            <h2> Acesse </h2>
+            <div class="navegacao">
+                <ul>
+                    <li>
+                        <a id="home" href="index.php"> Home </a>
+                    </li>
+                    <li>
+                        <a id="animais" href="animais.php"> Animais </a>
+                    </li>
+                    <li>
+                        <a id="login" href="login.html"> Login </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="coluna_direita">
+        <div>
+            <h2> Formulário de Adoção </h2>
+            <div class="login">
+                <form action="formulario.php" method="POST" enctype="multipart/form-data">
+                    <h4> Nome completo: <b style="color: #2A804F"> * </b> </h4>
+                    <input type="text" name="nome" id="nome" style="width: 300px; height: 25px;">
+                    <br>
+
+                    <h4> E-mail: <b style="color: #2A804F"> * </b> </h4>
+                    <input type="text" name="email" id="email" style="width: 300px; height: 25px;">
+                    <br>
+
+                    <h4> Telefone/Celular: <b style="color: #2A804F"> * </b> </h4>
+                    <input type="text" class="form-control cel-ddd-mask" placeholder="(00) 00000-0000" name="contato" id="contato" style="width: 300px; height: 25px;">
+                    <br>
+
+                    <h4> CPF: <b style="color: #2A804F"> * </b> </h4>
+                    <input type="text" class="form-control cpf-mask" placeholder="000.000.000-00" name="cpf" id="cpf" style="width: 300px; height: 25px;">
+                    <br>
+
+                    <h4> RG: <b style="color: #2A804F"> * </b> </h4>
+                    <input type="text" class="form-control rg-mask" placeholder="XX-00.000.000" name="rg" id="rg" style="width: 300px; height: 25px;">
+                    <br>
+
+                    <h4> Cidade: <b style="color: #2A804F"> * </b> </h4>
+                    <input type="text" name="cidade" id="cidade" style="width: 300px; height: 25px;">
+                    <br>
+
+                    <h4> Bairro: <b style="color: #2A804F"> * </b> </h4>
+                    <input type="text" name="bairro" id="bairro" style="width: 300px; height: 25px;">
+                    <br>
+
+                    <h4> Rua: <b style="color: #2A804F"> * </b> </h4>
+                    <input type="text" name="rua" id="rua" style="width: 300px; height: 25px;">
+                    <br>
+
+                    <h4> N°: <b style="color: #2A804F"> * </b> </h4>
+                    <input type="text" name="numero" id="numero" style="width: 300px; height: 25px;">
+                    <br>
+
+                    <h4> Complemento:</b> </h4>
+                    <input type="text" name="complemento" id="complemento" style="width: 300px; height: 25px;">
+                    <br>
+
+                    <h4> Nome do Animal: <b style="color: #2A804F"> * </b> </h4>
+                    <input type="text" name="nome_animal" id="nome_animal" style="width: 300px; height: 25px;">
+
+                    <h4> Data: <b style="color: #2A804F"> * </b> </h4>
+                    <input type="date" class="form-control date-mask" placeholder="dd/mm/aaaa" name="data_adocao" id="data_adocao" style="width: 300px; height: 25px;">
+                    <br><br> 
+                <input type="submit" name="salvar" value="Enviar" id="enviar" style="width: 100px; height: 30px; border-radius: 7px;" class="logar">
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div id="rodape" style="clear: both">
+    <br>
+    Desenvolvedor(a): Laura Laísa da Silva Mendonça <br>
+    Contato: lauralaisa1410@gmail.com <br>
+    Instituição: Instituto Federal de Educação, Ciência e Tecnologia de Minas Gerais - <i>Campus</i> Formiga <br>
+</div>
+</body>
+</html>

@@ -1,13 +1,14 @@
-
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="sortcut icon" href="imagens/icone_pata.png" type="image/gif"/>
         <title>APAF</title>
         <link rel="stylesheet" type="text/css" href="estilo.css">
     </head>
-    <body class="home">
-    <div id="topo">
-        <div id="cabecalho">
+    <!-- Classe para marcar a página atual -->
+    <body class="">
+    <div class="topo">
+        <div class="cabecalho">
             <img src="imagens/logo_esquerda.jpeg">
             <p class="nome">
                 <b> APAF </b>
@@ -22,13 +23,31 @@
                 <div class="navegacao">
                     <ul>
                         <li>
-                            <a id="home" href="index.html"> Home </a>
+                            <a id="home" href="home_apaf.php"> Home </a>
                         </li>
                         <li>
-                            <a id="animais" href="animais.html"> Animais </a>
+                            <a id="animais" href="animais_apaf.php"> Animais </a>
                         </li>
                         <li>
-                            <a id="login" href="login.html"> Login </a>
+                            <a id="cadastrar_evento" href="cadastrar_evento.html"> Cadastrar Evento </a>
+                        </li>
+                        <li>
+                            <a id="atualizar_evento" href="atualizar_evento.html"> Atualizar Evento </a>
+                        </li>
+                         <li>
+                            <a id="remover_evento" href="remover_evento.html"> Remover Evento </a>
+                        </li>
+                        <li>
+                            <a id="cadastrar_animal" href="cadastrar_animal.html"> Cadastrar Animal </a>
+                        </li>
+                        <li>
+                            <a id="atualizar_animal" href="atualizar_animal.html"> Atualizar Animal </a>
+                        </li>
+                        <li>
+                            <a id="historico_animal" href="historico_animal.php"> Histórico de Animal </a>
+                        </li>
+                        <li>
+                            <a id="adotantes" href="adotantes.php"> Adotantes </a>
                         </li>
                     </ul>
                 </div>
@@ -62,22 +81,38 @@
             </div>
             <div id="eventos">
                 <h2> Eventos </h2>
-                <ul>
-                    <li>
-                         <a href="https://apaformiga.wixsite.com/associacao/galeria-de-fotos-inauguracao-comedo">
-                             <img src="imagens/comedouro_bebedouro.png" width="200" height="200">
-                             <h3> Comedouro e bebedouro para os animais de rua: </h3>
-                             <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Foi realizado o projeto de instalação de comedouro e bebedouro para animais de rua, fornecendo alimento adequado e água limpa para os animais sem donos de Formiga e região.</p> <br>
-                         </a>
-                    </li>
-                    <li>
-                        <a href="https://apaformiga.wixsite.com/associacao/galeria-de-fotos-2a-feira-de-adocao">
-                            <img src="imagens/feira_adocao.jpg" width="200" height="200">
-                            <h3> Feira de adoção de animais: </h3>
-                            <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; APAF promove feira de adoção de animais para designá-los à novos lares em Formiga.</p> <br>
-                        </a>
-                    </li>
-                </ul>
+                    
+                    <?php 
+
+                       include "conexao.php";
+                        
+                        mysqli_select_db ($connect, $banco) or die ('Erro!');
+
+                        $query = sprintf("SELECT nome, descricao, imagem FROM evento");
+                        $dados = mysqli_query( $connect, $query) or die('erro ao executar a query');
+                        $linha = mysqli_fetch_assoc($dados);
+                        $total = mysqli_num_rows($dados);
+
+                     
+                   if($total > 0 ) {
+        // inicia o loop que vai mostrar todos os dados
+        do {
+?>
+					<ul>
+					    <li>
+					        <p>  
+					            <img src="imagens/<?=$linha['imagem']?>" width="200" height="200" >
+					            <h3> <?=$linha['nome']?> </h3> <br> <br>
+					            <?=$linha['descricao']?> <br> <br>  
+					        </p>  
+					    </li>
+					</ul>
+                <?php }
+
+                while($linha = mysqli_fetch_assoc($dados)); 
+
+            } 
+            ?>
             </div>
         </div>
     </div>
