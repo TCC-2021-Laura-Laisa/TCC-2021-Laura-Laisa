@@ -3,11 +3,11 @@ body{
     background: #ffffff;
 }
 
-#topo{
+.topo{
     background: #2A804F;
 }
 
-#cabecalho{
+.cabecalho{
     height: 200px;
     background: url("imagens/logo_direita.jpeg") no-repeat right top;
 }
@@ -49,6 +49,7 @@ ul{
     list-style-type: none;
 }
 
+
 .coluna_esquerda{
     width: 20%;
     padding-right: 5px;
@@ -65,13 +66,15 @@ ul{
     padding: 5px;
 }
 
-/*colocar class login na página login*/
-/* marcar a página atual */
-body.home .navegacao a#home,
-body.animais .navegacao a#animais,
-body.login .navegacao a#login{
-    text-decoration: underline;
-}
+/* Marcar a página atual:
+*body.home .navegacao a#home,
+*body.animais .navegacao a#animais,
+*body.login .navegacao a#login,
+*body.cadastrar_evento .navegacao a#cadastrar_evento,
+*body.cadastrar_animal .navegacao a#cadastrar_animal{
+*    text-decoration: underline;
+*}
+*/
 
 .acesso li{
 
@@ -105,6 +108,7 @@ p{
     padding-left: 90px;
 }
 
+
 #eventos li h3{
     color: #2A804F;
 }
@@ -118,22 +122,13 @@ p{
     margin-right: 20px;
 }
 
-.descricao a{
-    text-decoration: none;
+.descricao{
     color: #2A804F;
 }
 
 .animais{
     text-align: center;
     clear: both;
-}
-
-#cao{
-
-}
-
-#gato{
-
 }
 
 #animal li{
@@ -148,6 +143,22 @@ p{
 #animal li img{
     float: left;
     margin-right: 20px;
+}
+
+.login{
+    text-align: center;
+    clear: both;
+}
+
+.logar{
+    color: #ffffff;
+    background-color: #2A804F;
+    border: 0.5px solid #ffffff;
+}
+
+a{
+    text-decoration: none;
+    color: #2A804F;
 }
 
 #rodape{
