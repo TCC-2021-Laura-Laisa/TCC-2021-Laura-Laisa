@@ -1,0 +1,69 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="sortcut icon" href="../imagens/icone_pata.png" type="image/gif"/>
+    <title>APAF</title>
+    <link rel="stylesheet" type="text/css" href="../estilo.css">
+    <script src="javascript.js"></script>
+</head>
+<form action="login.php" method= "POST" >
+<!-- Classe para marcar a página atual -->
+<body class="">
+<div class="topo">
+        <div class="cabecalho">
+            <img src="../imagens/logo_esquerda.jpeg">
+            <p class="nome">
+                <b> APAF </b>
+                <br> Associação Protetora de Animais de Formiga-MG
+            </p>
+        </div>
+    </div>
+<div class="conteudo">
+    <div class="coluna_esquerda">
+        <div class="acesso">
+            <h2> Acesse </h2>
+            <div class="navegacao">
+                <ul>
+                    <li>
+                        <a id="home" href="index.php"> Home </a>
+                    </li>
+                    <li>
+                        <a id="animais" href="animais.php"> Animais </a>
+                    </li>
+                    <li>
+                        <a id="adotar" href="formulario_pagina.php"> Adotar </a>
+                    </li>
+                    <li>
+                        <a id="login" href="login.html"> Login </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="coluna_direita">
+        <div>
+            <h2> Login </h2>
+            <div class="login">
+                <form autocomplete="off" method="POST" action="login.php" name="efetuar_login">
+                    <h4> Usuário: <b style="color: #2A804F"> * </b> </h4>
+                    <input type="text" name="nome" id="nome" style="width: 300px; height: 25px;">
+                    <br>
+
+                    <h4> Senha: <b style="color: #2A804F"> * </b> </h4>
+                    <input type="password" name="senha" id="senha" style="width: 300px; height: 25px;">
+                </form>
+                <br> <br>
+                <input type="submit" name="btnAcao" value="Efetuar login" id="efetuarlogin" style="width: 100px; height: 30px; border-radius: 7px;" class="logar">
+                <br> <br>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="rodape" style="clear: both">
+    <br>
+    Desenvolvedor(a): Laura Laísa da Silva Mendonça <br>
+    Contato: lauralaisa1410@gmail.com <br>
+    Instituição: Instituto Federal de Educação, Ciência e Tecnologia de Minas Gerais - <i>Campus</i> Formiga <br>
+</div>
+</body>
+</html>
